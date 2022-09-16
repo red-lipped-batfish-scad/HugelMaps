@@ -10,9 +10,7 @@
 Download to your project directory:
 
 ```sh
-curl -LO http://git.io/Xy0Chg
-git add README.md
-git commit -m "Use README Boilerplate"
+npm install -> For dependencies
 ```
 
 ## Usage
