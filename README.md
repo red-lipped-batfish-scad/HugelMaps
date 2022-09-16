@@ -1,7 +1,3 @@
-# README Boilerplate
-
-A template of README best practices to make your README simple to understand and easy to use. 
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -11,7 +7,7 @@ A template of README best practices to make your README simple to understand and
 
 ## Installation
 
-Download to your project directory, add `README.md`, and commit:
+Download to your project directory:
 
 ```sh
 curl -LO http://git.io/Xy0Chg
