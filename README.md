@@ -25,6 +25,16 @@ Replace the contents of `README.md` with your project's:
 - Contributing instructions
 - Licence
 
+```mermaid
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+```
+
+```
+
 Feel free to remove any sections that aren't applicable to your project.
 
 ## Support
