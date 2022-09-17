@@ -37,11 +37,11 @@ module.exports = {
     }),
   ],
 
-  devServer: {
-    static: {
-      publicPath: '/dist',
-      directory: path.resolve(__dirname, 'dist'),
-    },
+    devServer: {
+        static: {
+            publicPath: '/dist',
+            directory: path.resolve(__dirname, 'dist')
+        },
 
     proxy: {
       '/': 'http://localhost:3000',
