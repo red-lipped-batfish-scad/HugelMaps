@@ -1,10 +1,13 @@
 import React from 'react';
-import PostCreator from '../components/PostCreator';
+import PostCreator from '../components/PostCreator.jsx';
 
 const PostContainer = () => {
-    return (
-        null
-    );
+  return (
+    <div className="postContainer">
+      <button>Give</button>
+      <PostCreator />
+    </div>
+  );
 };
 
 export default PostContainer;

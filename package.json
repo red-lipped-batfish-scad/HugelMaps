@@ -5,7 +5,7 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "concurrently \"cross-env NODE_ENV=development webpack serve --open\" \"cross-env NODE_ENV=development nodemon server/server.js\"",
+    "start": "concurrently \"cross-env NODE_ENV=development webpack serve --open\" \"nodemon server/server.js\"",
     "build": "webpack --mode production"
   },
   "repository": {
