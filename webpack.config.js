@@ -1,11 +1,11 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { EnvironmentPlugin } = require('webpack');
-const { parsePath } = require('react-router');
+// const { parsePath } = require('react-router');
 
 module.exports = {
     mode: process.env.NODE-EnvironmentPlugin,
-    entry: {src: '.client/index.js' },
+    entry: {src: './client/index.js' },
 
     output: {
         path: path.join(__dirname, 'dist'),
@@ -44,7 +44,7 @@ module.exports = {
     devServer: {
         static: {
             publicPath: '/dist',
-            directory: parsePath.resolve(__dirname, 'dist')
+            directory: path.resolve(__dirname, 'dist')
         },
 
         proxy: {
