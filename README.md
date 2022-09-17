@@ -100,7 +100,6 @@ Here's why:
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [![MongoDB][MongoDB]][MongoDB-url]
 * [![PostgreSQL][ElephantSQL]][ElephantSQL-url]
 * [![React][React.js]][React-url]
 * [![Webpack][Webpack]][Webpack-url]
@@ -120,7 +119,7 @@ To get a local copy up and running follow these simple example steps.
 This is an example of how to list things you need to use the software and how to install them.
 * npm
   ```sh
-  npm install npm@latest -g
+  npm install 
   ```
 
 ### Installation
