@@ -1,0 +1,16 @@
+.app {
+  border: 5px solid #333;
+}
+
+.mainContainer {
+  border: 5px solid green;
+}
+
+.postContainer {
+  border: 5px solid blue;
+}
+
+.feedContainer {
+  border: 5px solid red; 
+}
+
