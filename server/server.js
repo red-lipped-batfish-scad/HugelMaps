@@ -1,26 +1,15 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
-
+const feedRouter = require('./routes/feedRouter')
 const PORT = 3000;
 
-// TODO require in controllers
-// TODO import in DB
-
+// parses objects or strings from client (Req.body)
 app.use(express.urlencoded({ extended: true}));
+//parse all incoming request with a body (Req.body)
 app.use(express.json());
 
-const router = express.Router();
-
-// all incoming requests go to router
-app.use('/', router);
-
-// TODO routes
-
-// /feed - READ db
-
-// /give - INSERT
-// /delete - DELETE 
+// all incoming feed requests go to router
+app.use('/feed', feedRouter)
 
 //unkown route handler
 app.use((req, res) => res.sendStatus(404));
