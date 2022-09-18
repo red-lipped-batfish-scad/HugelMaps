@@ -228,9 +228,12 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Christian Looff - [@cmlooff](https://github.com/cmlooff)
-David Cheng - [@cmlooff](https://github.com/cmlooff)
-Anthony Al-Rifai - [@cmlooff](https://github.com/cmlooff)
-Stephanie Page - [@cmlooff](https://github.com/cmlooff)
+
+David Cheng - [@DavidZCheng](https://github.com/DavidZCheng)
+
+Anthony Al-Rifai - [@AnthonyAl-Rifai](https://github.com/AnthonyAl-Rifai)
+
+Stephanie Page - [@vividvoltage](https://github.com/vividvoltage)
 
 Project Link: [https://github.com/red-lipped-batfish-scad/scratchProject](https://github.com/red-lipped-batfish-scad)
 
