@@ -8,7 +8,7 @@ module.exports = {
 
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
 
   module: {
@@ -19,32 +19,32 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
-        },
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-    ],
+        use: ['style-loader', 'css-loader']
+      }
+    ]
   },
 
   plugins: [
     new HTMLWebpackPlugin({
       title: 'Development',
-      template: '/index.html',
-    }),
+      template: 'index.html'
+    })
   ],
 
-    devServer: {
-        static: {
-            publicPath: '/dist',
-            directory: path.resolve(__dirname, 'dist')
-        },
+  devServer: {
+    static: {
+      publicPath: '/dist',
+      directory: path.resolve(__dirname, 'dist')
+    },
 
     proxy: {
-      '/': 'http://localhost:3000',
-    },
-  },
+      '/': 'http://localhost:3000'
+    }
+  }
 };
