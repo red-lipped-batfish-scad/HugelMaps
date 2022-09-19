@@ -1,6 +1,7 @@
 const express = require('express');
-const feedController = ('../controllers/feedController');
+const feedController = require('../controllers/feedController');
 const feedRouter = express.Router();
+
 
 /** Get from Database
  * @Route   GET feed/
