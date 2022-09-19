@@ -1,5 +1,5 @@
 const express = require('express');
-const feedController = ('../controllers/feedController');
+const feedController = require('../controllers/feedController');
 const feedRouter = express.Router();
 
 /** Get from Database
@@ -13,8 +13,8 @@ const feedRouter = express.Router();
 // );
 
 /** Insert into Database
- * @Route   POST feed/give
- * @Desc    Inserts data from frontend form into database & returns the 
+ * @Route   POST give 
+ * @Desc    Inserts data from frontend give form into database & returns the full db for feed display
  * @Access  Public
  */
 feedRouter.post('/give', 
@@ -22,6 +22,9 @@ feedRouter.post('/give',
   feedController.getFeed,
   (req,res) => { 
     res.status(200).json(res.locals.feed)
+
+    // Debug
+    // return res.sendStatus(200);
   }
 );
 
@@ -32,6 +35,6 @@ feedRouter.post('/give',
  */
 feedRouter.delete('/delete/:id', 
   feedController.fulfilledGive,
-(req,res) => res.status(200).json('something from the giveDelete'))
+(req,res) => res.status(200).json('db entry has been deleted'))
 
 module.exports = feedRouter;

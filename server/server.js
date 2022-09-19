@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/feed', feedRouter)
 
 // unknown route handler
-app.use((req, res) => res.sendStatus(404));
+// app.use((req, res) => res.sendStatus(404));
 
 // global error handler
 app.use((err, req, res, next) => {
