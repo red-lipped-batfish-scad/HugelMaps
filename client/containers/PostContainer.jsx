@@ -18,7 +18,7 @@ const PostContainer = ({ onFeedItemCreated }) => {
 
     <div className="postContainer">
       <button
-        className="openPostCreator"
+        className="openPostCreator btn"
         onClick={openPostCreator ? onCancel : onGive}
       >
         {openPostCreator ? 'Cancel' : 'Give'}

@@ -23,7 +23,8 @@ feedController.getFeed = (req, res, next) => {
 };
 // access req.body object to INSERT
 feedController.postGive = (req, res, next) => {
-  console.log('inside feedGive')
+  console.log('inside feedGive', req.body)
+
   const {
     material, 
     detail, 
@@ -52,12 +53,8 @@ feedController.postGive = (req, res, next) => {
   ];
 
   db.query(text, values)
-  .then(dbResults => {
-
-    // res.locals.confirmation = dbResults
-    // console.log('db insert complete')
-    return next()
-  }).catch((err) => {
+  .then(() => next())
+  .catch((err) => {
     return next({
         log: `feedController.postGive: ERROR: ${err}`,
         message: {err: 'Error occured in feedController.postGive'}

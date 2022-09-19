@@ -14,10 +14,7 @@ import React from 'react';
 
 //sends a post request on submission to the database receives a 200 status code in response
 
-const PostCreator = ({
-  onFeedItemCreated,
-  closePostCreator,
-}) => {
+const PostCreator = ({ onFeedItemCreated, closePostCreator }) => {
   const handleSubmit = (event) => {
     console.log('something happened on submit');
     event.preventDefault();
@@ -28,13 +25,13 @@ const PostCreator = ({
     console.log(event.target[3].value);
     console.log(event.target[4].value);
 
-    fetch('http://localhost:3000/feed', {
+    fetch('/feed/give', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
+        /*'Access-Control-Allow-Origin': '*',*/
       },
-      mode: 'no-cors',
+      /*mode: 'no-cors',*/
       body: JSON.stringify({
         material: event.target[0].value, //make keys lowercase
         detail: event.target[1].value,
@@ -44,7 +41,11 @@ const PostCreator = ({
       }),
     })
       .then((res) => res.json())
-      .then((data) => (closePostCreator(false)), onFeedItemCreated(data)) // Made change here
+      .then((data) => {
+        closePostCreator(false);
+        console.log(data);
+        onFeedItemCreated(data);
+      }) // Made change here
       .catch((err) => console.log('error', err));
   };
 
@@ -52,7 +53,6 @@ const PostCreator = ({
     <div className="postCreatorContainer">
       <form onSubmit={handleSubmit}>
         <select name="Materials">
-          Material
           <option>Wood</option>
           <option>Compost</option>
           <option>Mulch</option>
@@ -72,11 +72,7 @@ const PostCreator = ({
         <label htmlFor="contact">Contact</label>
         <input name="contact"></input>
 
-        <input
-          type="submit"
-          value="Submit"
-          // onClick={(() => closePostCreator(false))}
-        ></input>
+        <input type="submit" value="Submit" />
       </form>
     </div>
   );
