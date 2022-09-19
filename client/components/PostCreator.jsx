@@ -14,7 +14,7 @@ import React from 'react';
 
 //sends a post request on submission to the database receives a 200 status code in response
 
-const PostCreator = () => {
+const PostCreator = ({ onFeedItemCreated }) => {
   const handleSubmit = (event) => {
     console.log('something happened on submit');
     event.preventDefault();
@@ -33,7 +33,7 @@ const PostCreator = () => {
       },
       mode: 'no-cors',
       body: JSON.stringify({
-        Material: event.target[0].value,
+        Material: event.target[0].value, //make keys lowercase
         Detail: event.target[1].value,
         Quantity: event.target[2].value,
         Location: event.target[3].value,
@@ -41,7 +41,7 @@ const PostCreator = () => {
       }),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data))
+      .then((data) => onFeedItemCreated(data)) // Made change here
       .catch((err) => console.log('error', err));
   };
 
