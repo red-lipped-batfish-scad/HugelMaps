@@ -40,6 +40,7 @@
     A user-created market place that supports the permaculture community!
     <br />
     <a href="https://github.com/red-lipped-batfish-scad/scratchProject"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/orgs/red-lipped-batfish-scad/projects/1/views/1"><strong>Explore the Project Board »</strong></a>
     <br />
     <br />
     <a href="https://github.com/red-lipped-batfish-scad/scratchProject">View Demo</a>
