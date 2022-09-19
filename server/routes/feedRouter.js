@@ -19,7 +19,7 @@ const feedRouter = express.Router();
  */
 feedRouter.post(
   '/give',
-  feedController.postGive,
+  // feedController.postGive,
   feedController.getFeed,
   (req, res) => {
     res.status(200).json(res.locals.feed);
