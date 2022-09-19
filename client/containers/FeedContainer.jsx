@@ -6,6 +6,7 @@ import FeedItem from '../components/FeedItem.jsx';
 
 //use map to render each feed item
 const FeedContainer = ({ feedItems, onFeedItemDeleted }) => {
+  // const reversedFeedItems = feedItems.reverse()
   return (
     <div className="feedContainer">
       {feedItems.map((el, idx) => {

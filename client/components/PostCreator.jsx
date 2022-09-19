@@ -51,7 +51,7 @@ const PostCreator = ({ onFeedItemCreated, closePostCreator }) => {
 
   return (
     <div className="postCreatorContainer">
-      <form onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
         <select name="Materials">
           <option>Wood</option>
           <option>Compost</option>
