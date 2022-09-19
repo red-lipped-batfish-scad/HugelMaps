@@ -8,11 +8,17 @@ app.use(express.urlencoded({ extended: true}));
 //parse all incoming request with a body (Req.body)
 app.use(express.json());
 
+// a test to check that FE is connected to back
+// app.use('/', (req, res, next) => {
+//   console.log('made it to server', req.body);
+//   next();
+// })
+
 // all incoming feed requests go to router
 app.use('/feed', feedRouter)
 
 // unknown route handler
-// app.use((req, res) => res.sendStatus(404));
+// app.use((req, res) => ressendStatus(404));
 
 // global error handler
 app.use((err, req, res, next) => {

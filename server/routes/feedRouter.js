@@ -2,6 +2,7 @@ const express = require('express');
 const feedController = require('../controllers/feedController');
 const feedRouter = express.Router();
 
+
 /** Get from Database
  * @Route   GET feed/
  * @Desc    Gets the feedItems from database to populate the Feed.jsx

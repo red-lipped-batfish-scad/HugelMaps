@@ -6,7 +6,13 @@ const App = () => {
   console.log('App rendering');
   return (
     <div className="app">
-      <h1>hello</h1>
+      <nav className="navbar">
+        <h1>
+          <a href="/">
+            <i className="fa-solid fa-otter"></i> HugelMaps
+          </a>
+        </h1>
+      </nav>
       <MainContainer />
     </div>
   );
