@@ -225,7 +225,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact
+## Contact of our members
 
 Christian Looff - [@cmlooff](https://github.com/cmlooff)
 
