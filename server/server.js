@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const feedRouter = require('./routes/feedRouter')
+const feedRouter = require('./routes/feedRouter');
 const PORT = 3000;
 
 // parses objects or strings from client (Req.body)
