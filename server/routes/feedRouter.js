@@ -29,7 +29,7 @@ feedRouter.post('/give',
  * @Desc    Delete data from database by id
  * @Access  Private
  */
-feedRouter.delete('/:delete', 
+feedRouter.delete('/delete/:id', 
   feedController.fulfilledGive,
 (req,res) => res.status(200).json('something from the giveDelete'))
 
