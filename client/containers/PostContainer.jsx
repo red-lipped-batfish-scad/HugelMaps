@@ -1,11 +1,11 @@
 import React from 'react';
 import PostCreator from '../components/PostCreator.jsx';
 
-const PostContainer = () => {
+const PostContainer = ({onFeedItemCreated}) => {
   return (
     <div className="postContainer">
       <button>Give</button>
-      <PostCreator />
+      <PostCreator onFeedItemCreated={onFeedItemCreated}/>
     </div>
   );
 };
