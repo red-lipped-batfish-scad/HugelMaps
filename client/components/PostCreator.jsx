@@ -25,7 +25,7 @@ const PostCreator = ({ onFeedItemCreated }) => {
     console.log(event.target[3].value);
     console.log(event.target[4].value);
 
-    fetch('/feed', {
+    fetch('http://localhost:3000/feed', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
