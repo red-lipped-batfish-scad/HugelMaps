@@ -6,7 +6,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "start": "concurrently \"cross-env NODE_ENV=development webpack serve --open\" \"nodemon server/server.js\"",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",

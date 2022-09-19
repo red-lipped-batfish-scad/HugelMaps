@@ -33,6 +33,7 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       title: 'Development',
+      // Had to fix index.html to point to just index.html
       template: 'index.html'
     })
   ],
