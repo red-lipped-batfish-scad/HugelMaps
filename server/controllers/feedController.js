@@ -30,6 +30,7 @@ feedController.postGive = (req, res, next) => {
     contact,
   } = req.body;
 
+  // js date program
   let post_date = new Date();
   let dd = post_date.getDate();
   let mm = post_date.getMonth()+1; 

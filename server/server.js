@@ -11,7 +11,7 @@ app.use(express.json());
 // all incoming feed requests go to router
 app.use('/feed', feedRouter)
 
-//unkown route handler
+// unknown route handler
 app.use((req, res) => res.sendStatus(404));
 
 // global error handler

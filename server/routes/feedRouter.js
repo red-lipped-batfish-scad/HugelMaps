@@ -7,20 +7,21 @@ const feedRouter = express.Router();
  * @Desc    Gets the feedItems from database to populate the Feed.jsx
  * @Access  Public
  */
-feedRouter.get('/', 
-  feedController.getFeed,
- (req, res) => res.status(200).json(res.locals.feed)
-);
+// feedRouter.get('/', 
+//   feedController.getFeed,
+//  (req, res) => res.status(200).json(res.locals.feed)
+// );
 
 /** Insert into Database
  * @Route   POST feed/give
- * @Desc    Inserts data from frontend form into database
+ * @Desc    Inserts data from frontend form into database & returns the 
  * @Access  Public
  */
 feedRouter.post('/give', 
   feedController.postGive,
+  feedController.getFeed,
   (req,res) => { 
-    res.status(200).json('something from the giveController')
+    res.status(200).json(res.locals.feed)
   }
 );
 
