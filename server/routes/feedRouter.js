@@ -6,28 +6,27 @@ const feedRouter = express.Router();
  * @Route   GET feed/
  * @Desc    Gets the feedItems from database to populate the Feed.jsx
  * @Access  Public
- * feedController.getFeed,
  */
-feedRouter.get(
-  '/',
-  feedController.getFeed
-  // , (req, res) => res.sendStatus(200)
-);
-feedRouter.get(
-  '/test',
-  feedController.test
-  // , (req, res) => res.sendStatus(200)
-);
+// feedRouter.get('/',
+//   feedController.getFeed,
+//  (req, res) => res.status(200).json(res.locals.feed)
+// );
 
 /** Insert into Database
- * @Route   POST feed/give
- * @Desc    Inserts data from frontend form into database
+ * @Route   POST give
+ * @Desc    Inserts data from frontend give form into database & returns the full db for feed display
  * @Access  Public
  */
 feedRouter.post(
   '/give',
-  // feedController.postGive,
-  (req, res) => res.status(200).send('something from the giveController')
+  feedController.postGive,
+  feedController.getFeed,
+  (req, res) => {
+    res.status(200).json(res.locals.feed);
+
+    // Debug
+    // return res.sendStatus(200);
+  }
 );
 
 /** Delete from Database
@@ -35,10 +34,8 @@ feedRouter.post(
  * @Desc    Delete data from database by id
  * @Access  Private
  */
-feedRouter.delete(
-  '/delete',
-  // feedController.fulfilledGive,
-  (req, res) => res.status(200).send('something from the giveDele/te')
+feedRouter.delete('/delete/:id', feedController.fulfilledGive, (req, res) =>
+  res.status(200).json('db entry has been deleted')
 );
 
 module.exports = feedRouter;

@@ -11,10 +11,10 @@ app.use(express.json());
 // all incoming feed requests go to router
 app.use('/feed', feedRouter);
 
-//! unknown route handler
+// unknown route handler
 // app.use((req, res) => res.sendStatus(404));
 
-//! global error handler
+// global error handler
 app.use((err, req, res, next) => {
   const defaultErr = {
     log: 'Express error handler caught unknown middleware error',
@@ -26,6 +26,6 @@ app.use((err, req, res, next) => {
   return res.sendStatus(errorObj.status).json(errorObj.message);
 });
 
-app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
+app.listen(PORT, () => console.log(`Listening on PORT:' ${PORT}`));
 
 module.exports = app;

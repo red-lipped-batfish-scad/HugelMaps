@@ -28,14 +28,14 @@ describe('TEST SUITE FOR FEED ROUTE', () => {
          * We initialized a response object that contains all the details from the http response
          * THEN we can use that with the Jest expect function
          */
-        const response = await request(server).get('/feed/test');
-        expect(response.body).toHaveProperty('material');
-        expect(response.body).toHaveProperty('detail');
-        expect(response.body).toHaveProperty('quantity');
-        expect(response.body).toHaveProperty('location');
-        expect(response.body).toHaveProperty('contact');
+        const response = await request(server).post('/feed/give');
+        // expect(response.body).toHaveProperty('material');
+        // expect(response.body).toHaveProperty('detail');
+        // expect(response.body).toHaveProperty('quantity');
+        // expect(response.body).toHaveProperty('location');
+        // expect(response.body).toHaveProperty('contact');
 
-        // console.log(response);
+        console.log(response);
         // expect(response.statusCode).toBe(200);
         // expect(response.text).toBe('Jefferey');
         // expect(true).toBe(true);
