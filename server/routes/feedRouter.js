@@ -7,14 +7,13 @@ const feedRouter = express.Router();
  * @Desc    Gets the feedItems from database to populate the Feed.jsx
  * @Access  Public
  */
-// feedRouter.get('/',
-//   feedController.getFeed,
-//  (req, res) => res.status(200).json(res.locals.feed)
-// );
+feedRouter.get('/', feedController.getFeed, (req, res) =>
+  res.status(200).json(res.locals.feed)
+);
 
 /** Insert into Database
  * @Route   POST give
- * @Desc    Inserts data from frontend give form into database & returns the full db for feed display
+ * @Desc    Inserts data from frontend give form into database & returns the submitted object
  * @Access  Public
  */
 feedRouter.post(
@@ -22,10 +21,10 @@ feedRouter.post(
   // feedController.postGive,
   feedController.getFeed,
   (req, res) => {
-    res.status(200).json(res.locals.feed);
-
-    // Debug
-    // return res.sendStatus(200);
+    // return most recent DB entry
+    let resultArray = res.locals.feed;
+    console.log('/feed/give is about to return:', resultArray);
+    res.status(200).json(resultArray[resultArray.length - 1]);
   }
 );
 
@@ -34,8 +33,11 @@ feedRouter.post(
  * @Desc    Delete data from database by id
  * @Access  Private
  */
-feedRouter.delete('/delete/:id', feedController.fulfilledGive, (req, res) =>
-  res.status(200).json('db entry has been deleted')
+feedRouter.delete(
+  '/delete/:id',
+  feedController.fulfilledGive,
+  feedController.getFeed,
+  (req, res) => res.status(200).json(res.locals.feed)
 );
 
 module.exports = feedRouter;

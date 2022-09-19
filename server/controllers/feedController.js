@@ -4,14 +4,17 @@ const feedController = {};
 
 // get entire DB
 feedController.getFeed = (req, res, next) => {
-  // console.log('im inside getFeed')
+  console.log('im inside getFeed');
   const text = 'SELECT * FROM feed;';
 
   db.query(text)
     .then((dbResults) => {
       // store on res.locals
-      // console.log('getFeed query is complete!')
+      // console.log('db ar rowCount:', dbResults.rowCount)
+      // console.log('getFeed db results:', dbResults)
+
       res.locals.feed = dbResults.rows;
+      // console.log('res.locals.feed:', res.locals.feed)
       return next();
     })
     .catch((err) => {
@@ -23,7 +26,7 @@ feedController.getFeed = (req, res, next) => {
 };
 // access req.body object to INSERT
 feedController.postGive = (req, res, next) => {
-  console.log('inside feedGive');
+  console.log('inside postGive');
   const { material, detail, quantity, location, contact } = req.body;
 
   // js date program
@@ -42,7 +45,7 @@ feedController.postGive = (req, res, next) => {
   db.query(text, values)
     .then((dbResults) => {
       // res.locals.confirmation = dbResults
-      // console.log('db insert complete')
+      console.log('db insert complete');
       return next();
     })
     .catch((err) => {
@@ -55,9 +58,10 @@ feedController.postGive = (req, res, next) => {
 
 // delete entry from DB via params
 feedController.fulfilledGive = (req, res, next) => {
-  const { givenItem } = req.params;
+  console.log('im in fulfilledGive');
+  const { id } = req.params;
 
-  const text = `DELETE FROM feed WHERE feed_id = ${givenItem};`;
+  const text = `DELETE FROM feed WHERE feed_id = ${id};`;
 
   db.query(text)
     .then(next())
