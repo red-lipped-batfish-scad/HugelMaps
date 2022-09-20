@@ -25,6 +25,7 @@ const PostCreator = ({ onFeedItemCreated, closePostCreator }) => {
     console.log(event.target[3].value);
     console.log(event.target[4].value);
 
+
     fetch('/feed/give', {
       method: 'POST',
       headers: {
