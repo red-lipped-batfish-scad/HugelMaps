@@ -41,6 +41,8 @@
     <br />
     <a href="https://github.com/red-lipped-batfish-scad/scratchProject"><strong>Explore the docs »</strong></a>
     <br />
+    <a href="https://github.com/orgs/red-lipped-batfish-scad/projects/1/views/1"><strong>Explore the Project Board »</strong></a>
+    <br />
     <br />
     <a href="https://github.com/red-lipped-batfish-scad/scratchProject">View Demo</a>
     ·
@@ -66,10 +68,8 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -225,7 +225,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 <!-- CONTACT -->
-## Contact of our members
+## Contact
 
 Christian Looff - [@cmlooff](https://github.com/cmlooff)
 

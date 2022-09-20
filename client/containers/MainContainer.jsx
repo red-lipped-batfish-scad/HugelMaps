@@ -12,15 +12,30 @@ const MainContainer = () => {
     setFeedItems([feedItem, ...feedItems]);
   };
 
+  const onFeedItemDeleted = (feed) => {
+    setFeedItems(feed);
+  };
+
+  useEffect(() => {
+    fetch('/feed')
+      .then((res) => res.json())
+      .then((data) => setFeedItems(data));
+  }, []);
+
   return (
-    <div className="mainContainer">
-      <h1>Hugelmaps</h1>
-      <PostContainer onFeedItemCreated={onFeedItemCreated} />
-      {feedItems ? (
-        <FeedContainer feedItems={feedItems} />
-      ) : (
-        <h1>There are no posts yet</h1>
-      )}
+    <div>
+      {/* <h1 className='landingHeader'>Hugelmaps</h1> */}
+      <div className="mainContainer">
+        <PostContainer onFeedItemCreated={onFeedItemCreated} />
+        {feedItems ? (
+          <FeedContainer
+            feedItems={feedItems}
+            onFeedItemDeleted={onFeedItemDeleted}
+          />
+        ) : (
+          <h1>There are no posts yet</h1>
+        )}
+      </div>
     </div>
   );
 };
