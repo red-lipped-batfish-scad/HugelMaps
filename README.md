@@ -85,7 +85,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great user generated marketplaces available on GitHub; however, we didn't find one that really suited our needs so we created one for the permaculture community.  HugelMaps is a user-generated marketplace explicitly built for the permaculture community.  Modeled after the Buy Nothing Project model where members give away unneeded items and may ask for needed items with no strings attached.
+HugelMaps is a user-generated marketplace explicitly built for the permaculture community.  Modeled after the Buy Nothing Project model where members give away unneeded items and may ask for needed items with no strings attached.
 
 
 Here's why:
