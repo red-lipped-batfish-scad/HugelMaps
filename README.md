@@ -1,7 +1,7 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
 <!--
-*** Thanks for checking out the Red-Lipped-Batfish Scratch Project. If you have a suggestion
+*** Thanks for checking out HugelMaps. If you have a suggestion
 *** that would make this better, please fork the repo and create a pull request
 *** or simply open an issue with the tag "enhancement".
 *** Don't forget to give the project a star!
@@ -34,7 +34,7 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Red-Lipped-Bat-Fish Scratch Project: Hugelkultur</h3>
+  <h3 align="center">HugelMaps</h3>
 
   <p align="center">
     A user-created market place that supports the permaculture community!
@@ -85,7 +85,8 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great user generated marketplaces available on GitHub; however, we didn't find one that really suited our needs so we created one for the permaculture community. We want to create a user generated marketplace that'll be the one stop shop for the permaculture community to give suppplies, sell equipment, and ask questions.
+There are many great user generated marketplaces available on GitHub; however, we didn't find one that really suited our needs so we created one for the permaculture community.  HugelMaps is a user-generated marketplace explicitly built for the permaculture community.  Modeled after the Buy Nothing Project model where members give away unneeded items and may ask for needed items with no strings attached.
+
 
 Here's why:
 * Rather than limit the garden to only one use, permaculture gardens employ a variety of uses
